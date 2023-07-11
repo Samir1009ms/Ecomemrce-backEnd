@@ -6,6 +6,7 @@ const BankCardSchema = new moongoose.Schema(
       type: moongoose.Schema.Types.ObjectId,
       ref: "Auth",
       required: true,
+
     },
     cards: [
       {
@@ -14,7 +15,7 @@ const BankCardSchema = new moongoose.Schema(
         cardDate: { type: String, required: true, trim: true },
         cardCvv: { type: String, required: true, trim: true },
         cardType: { type: String, required: true, trim: true },
-        balance: { type: Number, default:10000, trim: true },
+        balance: { type: Number, default: 10000, trim: true },
       },
     ],
   },
